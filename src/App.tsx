@@ -35,27 +35,26 @@ const AnimatedCountdownDisplay = () => {
   const [targetVal, setTargetVal] = useState(1000);
   
   // Setup the schedule
+  // Setup the schedule
   useEffect(() => {
-    // Generate initial: Random between 2 days (172800s) and 14 days (1209600s)
-    const gen = () => Math.floor(Math.random() * (1209600 - 172800 + 1)) + 172800;
-    const initial = gen();
+    // Target: January 5th, 2026, 6:00 AM MST (UTC-7)
+    const targetDate = new Date('2026-01-05T06:00:00-07:00'); 
+    
+    const calculateSecondsLeft = () => {
+      const now = new Date();
+      const difference = targetDate.getTime() - now.getTime();
+      return Math.max(0, Math.floor(difference / 1000));
+    };
+
+    const initial = calculateSecondsLeft();
     setDisplayVal(initial);
     setTargetVal(initial);
     
-    // Ticking Logic
     const timer = setInterval(() => {
-      setTargetVal(prev => prev > 0 ? prev - 1 : 0);
+      setTargetVal(calculateSecondsLeft());
     }, 1000);
 
-    // Jump Logic: reset every 10 seconds
-    const jumper = setInterval(() => {
-      setTargetVal(gen());
-    }, 10000);
-
-    return () => {
-      clearInterval(timer);
-      clearInterval(jumper);
-    };
+    return () => clearInterval(timer);
   }, []);
 
   // Animation Logic
@@ -125,10 +124,10 @@ const MainContent = () => (
           />
         </div>
 
-        {/* RIGHT COLUMN: Coming Soon, Countdown, Buttons */}
+        {/* RIGHT COLUMN: Launching Soon, Countdown, Buttons */}
         <div className="flex flex-col items-center lg:items-end space-y-8">
-          <h2 className="text-4xl lg:text-5xl font-bold tracking-[0.2em] text-white drop-shadow-md text-center lg:text-right">
-            COMING SOON
+          <h2 className="text-4xl lg:text-5xl font-bold tracking-[0.05em] text-white drop-shadow-md text-center lg:text-right">
+            LAUNCHING SOON
           </h2>
 
           <AnimatedCountdownDisplay />
