@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { BrowserRouter, Routes, Route, Link } from 'react-router-dom';
+import { HashRouter, Routes, Route, Link } from 'react-router-dom';
 import './App.css'; // Leaving import but file is empty
 
 // Pages
@@ -189,14 +189,14 @@ const Home = () => {
 
 function App() {
   return (
-    <BrowserRouter>
+    <HashRouter>
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/privacy-policy" element={<PrivacyPolicy />} />
         <Route path="/terms-of-service" element={<TermsOfService />} />
         <Route path="/ai-disclaimer" element={<AIDisclaimer />} />
       </Routes>
-    </BrowserRouter>
+    </HashRouter>
   );
 }
 
