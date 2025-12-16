@@ -1,3 +1,33 @@
+@import "tailwindcss";
+
+@theme {
+  --font-display: 'Satoshi', 'sans-serif';
+  --color-gradient-purple: #9042F0;
+  --color-gradient-pink: #C353A1;
+  --color-gradient-red: #FC5B66;
+  --color-gradient-orange: #fe9544;
+
+  --animate-gradient-roll: gradient-roll 15s ease infinite;
+  --animate-heartbeat: heartbeat 2s infinite;
+
+  @keyframes heartbeat {
+    0% { transform: scale(1) }
+    5% { transform: scale(1.1) }
+    10% { transform: scale(1) }
+    15% { transform: scale(1.1) }
+    50% { transform: scale(1) }
+    100% { transform: scale(1) }
+  }
+}
+
+@keyframes gradient-roll {
+  0% { background-position: 0% 50% }
+  50% { background-position: 100% 50% }
+  100% { background-position: 0% 50% }
+}
+
+
+
 @font-face {
   font-family: 'Satoshi';
   src: url('./assets/fonts/Satoshi-Regular.otf') format('opentype');
@@ -19,114 +49,11 @@
   font-style: normal;
 }
 
-:root {
-  --gradient-purple: #9042F0;
-  --gradient-pink: #C353A1;
-  --gradient-red: #FC5B66;
-  --gradient-orange: #fe9544;
-}
-
-html {
-  height: 100%;
-  background-color: rgb(224, 150, 255);
-  overflow: hidden;
-}
-
 body {
   margin: 0;
   padding: 0;
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  width: 100%;
-  height: 100%;
-  overflow: hidden;
-  font-family: 'Satoshi', sans-serif;
-  color: white;
 }
 
 #root {
-  width: 100%;
-  height: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  height: 100%;
-  width: 100%;
-  text-align: center;
-}
-
-.content {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-evenly;
-  height: 100%;
-  width: 100%;
-  padding: 2rem;
-  box-sizing: border-box;
-}
-
-.logo {
-  width: 25vh;
-  object-fit: contain;
-  filter: drop-shadow(0 10px 8px rgba(255, 255, 255, 0.3)) drop-shadow(0 -10px 8px rgba(255, 255, 255, 0.3));
-}
-
-.title {
-  font-size: 7vh;
-  line-height: 1.1;
-  font-weight: 900;
-  letter-spacing: 0.05em;
-  color: white;
-  text-shadow: 0 4px 6px rgb(0 0 0 / 0.1);
-  margin: 0;
-}
-
-@keyframes gradientRoll {
-  0% {
-    background-position: 0% 50%;
-  }
-  50% {
-    background-position: 100% 50%;
-  }
-  100% {
-    background-position: 0% 50%;
-  }
-}
-
-@keyframes heartbeat {
-  0% {
-    transform: scale(1);
-  }
-  5% {
-    transform: scale(1.1);
-  }
-  10% {
-    transform: scale(1);
-  }
-  15% {
-    transform: scale(1.1);
-  }
-  50% {
-    transform: scale(1);
-  }
-  100% {
-    transform: scale(1);
-  }
-}
-
-.heartbeat {
-  animation: heartbeat 2s infinite;
-  image-rendering: -webkit-optimize-contrast;
+  @apply w-full h-full flex justify-center items-center;
 }
