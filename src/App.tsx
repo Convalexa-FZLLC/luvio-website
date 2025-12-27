@@ -6,6 +6,7 @@ import './App.css'; // Leaving import but file is empty
 import PrivacyPolicy from './pages/legal/PrivacyPolicy';
 import TermsOfService from './pages/legal/TermsOfService';
 import AIDisclaimer from './pages/legal/AIDisclaimer';
+import Support from './pages/Support';
 
 // Icons
 const AppleIcon = () => (
@@ -181,6 +182,7 @@ const Home = () => {
         <Link to="/privacy-policy" className="hover:text-white hover:underline transition-colors">Privacy Policy</Link>
         <Link to="/terms-of-service" className="hover:text-white hover:underline transition-colors">Terms & Conditions</Link>
         <Link to="/ai-disclaimer" className="hover:text-white hover:underline transition-colors">AI Disclaimer</Link>
+        <Link to="/support" className="hover:text-white hover:underline transition-colors">Support</Link>
       </footer>
     </div>
   );
@@ -194,6 +196,7 @@ function App() {
         <Route path="/privacy-policy" element={<PrivacyPolicy />} />
         <Route path="/terms-of-service" element={<TermsOfService />} />
         <Route path="/ai-disclaimer" element={<AIDisclaimer />} />
+        <Route path="/support" element={<Support />} />
       </Routes>
     </HashRouter>
   );

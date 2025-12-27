@@ -6,10 +6,11 @@ import './LegalLayout.css';
 interface LegalLayoutProps {
   children: ReactNode;
   title: string;
+  subtitle?: string; // Optional subtitle
   lastUpdated?: string;
 }
 
-const LegalLayout = ({ children, title, lastUpdated }: LegalLayoutProps) => {
+const LegalLayout = ({ children, title, subtitle, lastUpdated }: LegalLayoutProps) => {
   return (
     <div style={{
       width: '100%',
@@ -77,6 +78,19 @@ const LegalLayout = ({ children, title, lastUpdated }: LegalLayoutProps) => {
           }}>
             {title}
           </h1>
+          
+          {subtitle && (
+            <p style={{ 
+              fontSize: '1.75rem', 
+              fontWeight: 600, 
+              color: '#555', 
+              marginTop: '-0.5rem', 
+              marginBottom: '2rem',
+              lineHeight: 1.3
+            }}>
+              {subtitle}
+            </p>
+          )}
           
           {lastUpdated && (
             <p style={{ color: '#666', marginBottom: '3rem', fontSize: '0.95rem' }}>

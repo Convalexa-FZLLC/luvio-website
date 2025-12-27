@@ -83,9 +83,15 @@ When we have no ongoing legitimate business need to process your personal data a
 
 Luvio will only keep your personal data for as long as it is necessary for the purposes set out in this Privacy Policy, unless a longer retention period is required or permitted by law. In most instances, your personal data is retained until the earliest of: (a) when you request its deletion; (b) up to 90 days after Luvio no longer requires such data for the purpose for which it was collected; or (c) until required to be deleted by laws applicable in your jurisdiction. Please email us at support@luvio.ca to request the deletion of any personal data of yours that we hold. 
 
-### 9. **Children**
+### 9. **Child Safety & CSAE Policy**
 
 The Service is not directed nor intended to be used by children under the age of majority and we do not knowingly collect any personal data from children under the age of majority. If we learn that we inadvertently collected personal data from a child under the age of majority, in a jurisdiction where consent of a parent or guardian is required to be collected prior to the collection of such personal data, without first obtaining such appropriate parental consent, we will delete that data as quickly as possible. If you are a parent or guardian of a child under the age of majority, who you believe provided Luvio with personal data without your consent, please contact us at support@luvio.ca.
+
+Luvio Inc. strictly prohibits any form of child sexual exploitation and abuse (“CSAE”). The Luvio Service is intended exclusively for adults aged 18 years or older, and individuals under the age of 18 are not permitted to create accounts or use the Service.
+
+We do not allow content, behavior, profiles, images, messages, or interactions that exploit, sexualize, endanger, or attempt to engage minors in any way. This includes any attempt to solicit, groom, or communicate with a minor for sexual purposes.
+
+Any user found to be engaging in or attempting CSAE will have their account permanently removed and may be reported to appropriate authorities. Luvio Inc. cooperates with law enforcement and complies with all applicable child safety laws and mandatory reporting obligations.
 
 ### 10. **DO NOT TRACK DISCLOSURE**
 
