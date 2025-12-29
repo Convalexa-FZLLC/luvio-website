@@ -5,7 +5,7 @@ const PrivacyPolicy = () => {
   return (
     <LegalMarkdownViewer 
       title="Privacy Policy" 
-      lastUpdated="December 12, 2025" 
+      lastUpdated="December 27, 2025" 
       content={privacyMd} 
     />
   );

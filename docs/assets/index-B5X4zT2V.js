@@ -146,7 +146,7 @@ Luvio Inc.
 ATTN: Mark Porayko  
 Edmonton, Alberta, Canada  
 [support@luvio.ca](mailto:support@luvio.ca)
-`,HM=()=>X.jsx(ud,{title:"Privacy Policy",lastUpdated:"December 12, 2025",content:jM}),PM=`These Terms and Conditions, including any other document referencing these Terms and Conditions, (collectively, “**Agreement**”) are entered into between you and Luvio Inc. (“**Luvio**”, “**we**”, “**us**” or “**our**”) and govern your access to and use of Luvio’s online services, including but not limited to Luvio’s website available at luvio.ca, including all subdomains (“**Website**”), the Luvio mobile application (“**App**”) and any other product or service to which Luvio applies this Agreement (collectively, “**Service**”).
+`,HM=()=>X.jsx(ud,{title:"Privacy Policy",lastUpdated:"December 27, 2025",content:jM}),PM=`These Terms and Conditions, including any other document referencing these Terms and Conditions, (collectively, “**Agreement**”) are entered into between you and Luvio Inc. (“**Luvio**”, “**we**”, “**us**” or “**our**”) and govern your access to and use of Luvio’s online services, including but not limited to Luvio’s website available at luvio.ca, including all subdomains (“**Website**”), the Luvio mobile application (“**App**”) and any other product or service to which Luvio applies this Agreement (collectively, “**Service**”).
 
 **BY EXECUTING AN AGREEMENT THAT REFERENCES THESE TERMS, BY CLICKING** “**I AGREE” OR SIMILAR CONFIRMATION, OR BY USING THE SERVICE YOU ARE AGREEING TO BE BOUND BY THIS AGREEMENT.** 
 
