@@ -33,8 +33,8 @@ const LegalLayout = ({ children, title, subtitle, lastUpdated }: LegalLayoutProp
         zIndex: 10
       }}>
         <Link to="/" style={{ textDecoration: 'none', display: 'flex', alignItems: 'center', gap: '10px' }}>
-             <img src="/luvio_heart.png" alt="Luvio Logo" style={{ height: '26px' }} />
-             <span style={{ fontWeight: 900, fontSize: '1.2rem', color: '#000' }}>Luvio</span>
+             <img src="/luvio-circle.png" alt="Luvio Logo" style={{ height: '32px' }} />
+             <span style={{ fontWeight: 700, fontSize: '1.5rem', color: '#000' }}>LUVIO</span>
         </Link>
         <Link to="/" style={{
           padding: '0.5rem 1rem',

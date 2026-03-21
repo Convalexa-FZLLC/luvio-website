@@ -1,6 +1,9 @@
 import { useState, useEffect } from 'react';
 import { HashRouter, Routes, Route, Link } from 'react-router-dom';
-import './App.css'; // Leaving import but file is empty
+import './App.css'; 
+
+import FloatingGradientBackground from './FloatingGradientBackground';
+import luvioLogo from './assets/luvio-logo2.png';
 
 // Pages
 import PrivacyPolicy from './pages/legal/PrivacyPolicy';
@@ -38,8 +41,9 @@ const AnimatedCountdownDisplay = () => {
   // Setup the schedule
   // Setup the schedule
   useEffect(() => {
-    // Target: January 5th, 2026, 6:00 AM MST (UTC-7)
-    const targetDate = new Date('2026-01-05T06:00:00-07:00'); 
+    // Target: 20 days from today
+    const targetDate = new Date();
+    targetDate.setDate(targetDate.getDate() + 20);
     
     const calculateSecondsLeft = () => {
       const now = new Date();
@@ -102,27 +106,22 @@ const AnimatedCountdownDisplay = () => {
   );
 };
 
-const MainContent = () => (
+const MainContent = () => {
+  return (
   <div className="w-full h-full overflow-y-auto">
     <div className="min-h-full w-full flex flex-col justify-center items-center py-16 px-6 pb-32 md:p-8 md:pb-32">
       <div className="w-full max-w-7xl grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-8 items-center">
         
-        {/* LEFT COLUMN: Title, Subtitle, Heart */}
-        <div className="flex flex-col items-center lg:items-start text-center lg:text-left space-y-8">
-          <div>
-            <h1 className="text-[10vh] lg:text-[15vh] leading-none font-black tracking-wider text-white drop-shadow-md">
-              LUVIO
-            </h1>
-            <p className="text-xl lg:text-3xl font-medium opacity-95 drop-shadow-sm mt-4 max-w-xl mx-auto lg:mx-0">
-              Bringing you the next-level dating experience
-            </p>
-          </div>
-
+        {/* LEFT COLUMN: Logo, Subtitle */}
+        <div className="flex flex-col items-center lg:items-start text-center lg:text-left justify-center h-full">
           <img 
-            src="/luvio_heart.png"
-            alt="Heart" 
-            className="w-[20vh] lg:w-[25vh] animate-heartbeat object-contain"
+            src={luvioLogo}
+            alt="Luvio Logo" 
+            className="w-64 sm:w-80 lg:w-96 mx-auto lg:mx-0 drop-shadow-md pb-4"
           />
+          <p className="text-xl lg:text-3xl font-medium opacity-95 drop-shadow-sm mt-4 max-w-xl mx-auto lg:mx-0">
+            Built around compatibility - so connection actually makes sense
+          </p>
         </div>
 
         {/* RIGHT COLUMN: Launching Soon, Countdown, Buttons */}
@@ -163,19 +162,19 @@ const MainContent = () => (
       </div>
     </div>
   </div>
-);
+  );
+};
 
 // Home Page
 const Home = () => {
   return (
     <div 
-      className="fixed inset-0 w-full h-full overflow-hidden text-white font-sans"
-      style={{ 
-        background: '#000000ef'
-        // background: 'linear-gradient(90deg, #000000, #3a0e66, #9042F0, #C353A1, #FC5B66, #fe9544)' 
-      }}
+      className="fixed inset-0 w-full h-full overflow-hidden text-white font-sans bg-black"
     >
-      <MainContent />
+      <FloatingGradientBackground />
+      <div className="relative z-10 w-full h-full">
+        <MainContent />
+      </div>
       
       {/* Footer */}
       <footer className="fixed bottom-0 left-0 right-0 p-6 flex justify-center gap-6 md:gap-8 text-xs md:text-sm font-medium text-white/60 z-10 bg-gradient-to-t from-black/90 via-black/50 to-transparent backdrop-blur-[3px]">
