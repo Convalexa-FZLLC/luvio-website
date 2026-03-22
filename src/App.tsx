@@ -3,7 +3,7 @@ import { HashRouter, Routes, Route, Link } from 'react-router-dom';
 import './App.css'; 
 
 import FloatingGradientBackground from './FloatingGradientBackground';
-import luvioLogo from './assets/luvio-logo2.png';
+import luvioLogo from './assets/luvio-logo.png';
 
 // Pages
 import PrivacyPolicy from './pages/legal/PrivacyPolicy';
